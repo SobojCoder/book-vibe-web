@@ -1,6 +1,7 @@
 import React from 'react';
 import { IBook } from '../components/type/book.type';
 import BookCard from '../components/bookCard';
+
 const getBooks = async() =>{
     const response = await fetch('http://localhost:3000/booksData.json');
     const data = response.json();

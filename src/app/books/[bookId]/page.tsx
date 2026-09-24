@@ -1,3 +1,5 @@
+import ReadButton from "@/app/components/booksDetails/ReadButton";
+import WishlistButton from "@/app/components/booksDetails/wishlistButton";
 import { IBook } from "@/app/components/type/book.type";
 import Image from "next/image";
 import Link from "next/link";
@@ -159,19 +161,10 @@ const BookDetailsPages = async ({ params }: IBookDetailsPageProps) => {
 
                 {/* ================= BUTTONS ================= */}
                 <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  <Link
-                    href="#"
-                    className="flex h-13 items-center justify-center rounded-xl bg-[#23BE0A] px-6 font-bold text-white shadow-lg shadow-[#23BE0A]/20 transition duration-300 hover:-translate-y-1 hover:bg-[#1da509]"
-                  >
-                    Read
-                  </Link>
 
-                  <Link
-                    href="#"
-                    className="flex h-13 items-center justify-center rounded-xl border-2 border-[#59c6d2] bg-white px-6 font-bold text-[#43afba] transition duration-300 hover:-translate-y-1 hover:bg-[#59c6d2] hover:text-white"
-                  >
-                    Wishlist
-                  </Link>
+                  <ReadButton book={book}/>
+
+                  <WishlistButton book={book}/>
                 </div>
               </div>
             </div>
